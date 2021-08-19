@@ -1,0 +1,34 @@
+<div class="gallery_banner">
+    <h2 class="naslov">SINGLE PRODUCT</h2>
+</div>
+<div class="row col-sm-12">
+    <div class="card single ">
+        <div class="row " ng-repeat="product in product |filter : {product_id: 7 }">
+          <div class="col-sm-6">
+            <div class="row">  
+               <img src="./assets/img/products/{{product.product_cover_1}}" class="card-img" alt="...">
+            </div>
+            <div  class="row">
+                <div class="card col-sm-4">
+                    <img src="./assets/img/products/{{product.product_cover_2}}" class="card-img" alt="...">
+                </div>
+                <div class="card col-sm-4">
+                    <img src="./assets/img/products/{{product.product_cover_3}}" class="card-img" alt="...">
+                </div>
+            </div>
+
+        </div>
+          <div class="col-sm-6">
+            <div class="card-body">
+              <h3 class="card-title">{{product.product_name}}</h3>
+              <h5 class="card-title">{{product.product_price}} denari</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <h6>Categorie : {{product.product_categorie}}</h6>
+              <h6>Weight : {{product.product_weight}}</h6>
+              <h6>Packing : {{product.product_box}}</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>   

@@ -1,0 +1,34 @@
+<div class="table-responsive">
+<h3>Chef List</h3>
+ 
+  <table class="table table-sm">
+  
+    <thead>
+        <tr>
+            <th>PK</th>
+            <th>
+                <input type="text" placeholder="Search by Full Name" id="searchByFull_name" name="searchByFull_name"
+                ng-model="searchByFull_name">
+            </th>
+            <th>Chef Photo</th>
+            <th>Description</th>
+            <th>Facebook</th>
+            <th>Linkedin</th>
+            <th>Instagram</th>
+            <th>DELETE</th>
+        </tr>
+    </thead>
+    <tbody class="cell">
+        <tr class="cell" ng-repeat="chef in chef | filter : {full_name:searchByFull_name}">          
+            <td >{{chef.chef_id}}</td>
+            <td >{{chef.full_name}}</td>
+            <td>{{chef.cover_chef}}</td>
+            <td >{{chef.description}}</td>
+            <td >{{chef.facebook}}</td>
+            <td >{{chef.linkedin}}</td>
+            <td >{{chef.instagram}}</td>
+            <td><button ng-click="deleteRow('chef',chef.chef_id)">Izbrishi</button></td>
+        </tr>
+    </tbody>
+  </table>
+</div>

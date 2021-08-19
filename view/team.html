@@ -1,0 +1,24 @@
+<div class="gallery_banner">
+    <h2 class="naslov">OUR TEAM</h2>
+</div>
+<div class="card-deck team col-sm-12">
+    <div class="card col-sm-3" style="width:200px" ng-repeat="chef in chef">
+      <img class="card-img-top" src="./assets/img/{{chef.cover_chef}}" alt="kuvar1">
+      <div class="card-body">
+        <h5 class="card-title">{{chef.full_name}}</h5>
+        <p class="card-text">{{chef.description}}</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <div class="row col-sm-12 social">
+            <div class="col-sm-4">
+              <a href="{{chef.facebook}}"><i class="fab fa-facebook fa-2x"></i></a>
+            </div>
+            <div class="col-sm-4">
+              <a href="{{chef.linkedin}}"><i class="fab fa-linkedin fa-2x"></i></a>
+            </div>
+              <div class="col-sm-4">
+               <a href="{{chef.instagram}}"><i class="fab fa-instagram fa-2x"></i></a> 
+            </div>               
+        </div>
+    </div>
+    </div>
+  </div>

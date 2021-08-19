@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration</title>
+
+    <!--  Bootstrap css file  -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/all.min.css">
+
+
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body ng-app="myApp" ng-controller="myCtrl"> 
+    <div class="main display-table">
+        <div class="row  col-sm-12 display-table-row">
+<!--Left side-->
+            <div class="col-sm-2 hidden-xs display-table-cell valign-top"  id="side-menu">
+                <h1 class="hidden-sm hidden-xs ">Navigation</h1>
+                <img class="logo" src="./assets/img/logo-admin.png" alt="logo">
+                <ul>
+                    <li class="Link">
+                        <a href="#!main">
+                            <span class="hidden-sm hidden-xs"><i class="fas fa-tachometer-alt"></i> Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="Link">
+                        <a href="#collapse-post" data-toggle="collapse" aria-controls="collapse-post">
+                            <span class="hidden-sm hidden-xs"><i class="fas fa-birthday-cake"></i>Products</span>
+                        </a>
+                        <ul class="collapse collapseable" id="collapse-post">
+                            <li><a href="#!product">New Product</a></li>
+                            <li><a href="#!product_list">Products List</a></li>
+                        </ul>
+                    </li>
+                    <li class="Link">
+                        <a href="#collapse-blog" data-toggle="collapse" aria-controls="collapse-blog">
+                            <span class="hidden-sm hidden-xs"><i class="far fa-copy"></i> Blog</span>
+                        </a>
+                        <ul class="collapse collapseable" id="collapse-blog">  
+                            <li><a href="#!unapproved">New Blog</a>                       
+                            </li> 
+                            <li><a href="#!unapproved">Blog List</a>                 
+                            </li>                      
+                        </ul>
+                    </li>
+                    <li class="Link">
+                        <a href="#collapse-chef" data-toggle="collapse" aria-controls="collapse-chef">
+                            <span class="hidden-sm hidden-xs"><i class="fas fa-chess-rook"></i> Chefs</span>
+                        </a>
+                        <ul class="collapse collapseable" id="collapse-chef">  
+                            <li><a href="#!chef">New Chef</a>                       
+                            </li> 
+                            <li><a href="#!list_chef">Chef List</a>                 
+                            </li>                      
+                        </ul>
+                    </li>
+                    <li class="Link">
+                        <a href="#collapse-tag" data-toggle="collapse" aria-controls="collapse-tag">
+                            <span class="hidden-sm hidden-xs"><i class="fas fa-tags"></i> Recipe</span>
+                        </a>
+                        <ul class="collapse collapseable" id="collapse-tag">  
+                            <li><a href="#!unapproved">New Recipe </a>                       
+                            </li> 
+                            <li><a href="#!unapproved">Recipe List</a>                 
+                            </li>                      
+                        </ul>
+                    </li>
+                    <li class="Link">
+                        <a href="#!contact">
+                            <span class="hidden-sm hidden-xs"><i class="fas fa-file-signature"></i> Contacts</span>
+                        </a>
+                    </li>
+                    <li class="Link settings-btn">
+                        <a href="#!settings">
+                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                            <span class="hidden-sm hidden-xs">Settings</span>
+                        </a>
+                    </li>
+                </ul>           
+            </div>
+
+
+<!--Right side-->
+            <div class="rightside col-sm-10 display-table-cell  valign-top">
+                <div class="row" id="nav-header"> 
+                     <div>
+                        <ul class="header">
+                            <li id="welcome" class="hidden-xs">Welcome to Administation area</li>
+                            <li><button type="submit" class="btn btn-sm btn-primary btncolor" ng-click="logout_function()">               
+                                Log Out
+                            </button> </li>
+                        </ul>
+                    </div>                      
+                </div>
+
+                <div ng-view>                   
+                </div>
+
+                <div class="row" id="admin-footer">
+                    <footer>
+                        <div class="pull-left"><b>Copyrught </b>&copy; 2020</div>
+                        <div class="pull-right">Vladimir Sotiroski</div>
+                    </footer>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+
+
+
+
+
+    <!--  Bootstrap js file  -->
+    <script src="../assets/js/all.min.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>    
+ 
+
+
+    <!---Angular JS-->
+    <script src="./assets/js/angular.min.js"></script>
+    <script src="./assets/js/angular-route.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/routes.js"></script>
+    
+
+</body>
+</html>

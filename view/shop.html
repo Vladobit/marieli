@@ -1,0 +1,45 @@
+<div class="gallery_banner">
+    <h2 class="naslov">S H O P</h2>
+</div>
+<div class="row col-sm-12 shop_row">
+    <div class="col-sm-3 ">
+         
+        <div class="col-sm-12 shop_left_row">
+            <h5>CATEGORIES</h5>
+            <div class="col-sm-10">
+              <select id="product_categorie" class="form-control "ng-model="product_categorie" >
+              <option value="" selected>All Categories</option>
+              <option value="Cakes">Cakes</option>
+              <option value="Sweets">Sweets</option>
+              <option value="Pastry">Pastry</option>
+              <option value="Other">Others</option>
+              </select>
+          </div>
+        </div>
+        <div class="col-sm-12 shop_left_row">
+            <h5 aria-valuetext="Popular"ng-model="product_time" >POPULAR PRODUCTS</h5>
+            <div class="card" ng-repeat="product in product |filter : 'Popular' | limitTo: 3">
+                <img src="./assets/img/products/{{product.product_cover_1}}" class="card-img-top" alt="cake">
+                <div class="card-body">
+                  <h5 class="card-title">{{product.product_name}}</h5>
+                </div>
+              </div>
+        </div>   
+    </div>  
+    <div class="col-sm-9 ">
+        <div class="row ">            
+              <p class="para">Show results</p>     
+        </div>
+        <div class="row">
+              <div class="col-sm-4" ng-repeat="product in product |filter :{product_categorie: product_categorie}">
+                <div class="card">
+                  <img src="./assets/img/products/{{product.product_cover_1}}" class="card-img-top" alt="...">
+                  <div class="card-body card-img-overlay">
+                    <h5 class="card-title text">{{product.product_name}} {{product.product_price}} den.</h5>
+                 </div>
+                </div>
+             </div>
+        </div>
+    </div>
+</div>
+    

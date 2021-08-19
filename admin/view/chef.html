@@ -1,0 +1,28 @@
+<h3>New Chef</h3>
+<div class="alert alert-success" ng-show="success">Success Input</div>
+<form name="myForm" >
+    <div class="form-group">
+        <span class="alert alert-danger" ng-show="myForm.full_name.$invalid">Vnesete ime min 4 karakteri</span>
+        <input type="text" class="form-control" placeholder="Enter Full Name" id="full_name" ng-minlength="4"  name="full_name" ng-model="full_name">
+    </div>
+    <div class="form-group ">       
+        <input type="file" class="form-control-file  border" name="file" ng-model="cover_chef">      
+    </div>
+    <div class="form-group">
+        <span class="alert alert-danger" ng-show="myForm.description.$invalid">Vnesete ime min 13 karakteri</span>
+        <input type="text" class="form-control" placeholder="Enter Description" id="description" ng-minlength="13"  name="description" ng-model="description">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="https://www.facebook.com/.." id="facebook" name="facebook"  ng-model="facebook">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="https://www.linkedin.com/in/.." id="linkedin" name="linkedin" ng-model="linkedin">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="https://www.instagram.com/.." id="instagram" name="instagram" ng-model="instagram">
+    </div>
+    <div class="alert alert-danger" ng-show="error">Please fill corecct from</div>
+    <button class="btn btn-info" ng-click="
+    (myForm.full_name.$valid && myForm.description.$valid) ?
+    details_chef_fun(full_name,cover_chef,description,facebook,linkedin,instagram) : error_fun()">SAVE</button> 
+</form>

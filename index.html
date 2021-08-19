@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marieli</title>
+
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/all.min.css">
+
+    <link rel="stylesheet" href="./assets/css/main.css">
+    
+
+    <script src="./assets/js/angular.min.js"></script>
+    <script src="./assets/js/angular-route.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/routes.js"></script>
+
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+  <!-- Header Del -->
+    <header>
+        <div class="row banner col-sm-12">
+               <div class="col-sm-4 adresa">
+                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-geo-alt" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                </svg>
+                  <h6>Partizanska 57-10<br/> 7000 Bitola, Macedonia</h6>
+               </div> 
+               <div class="col-sm-4 logo">
+                   <img src="./assets/img/marieli.png" alt="logo" >
+               </div>
+               <div class="col-sm-4 social_btn">
+                <a href="#!contactus" class="btn btn-secondary btn-lg btncolor" role="button" aria-pressed="true">GET IN TOUCH</a>
+               </div> 
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="nav navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#!main">HOME<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="#!gallery">GALLERY</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#!shop">SHOP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#collapse-post" data-toggle="collapse" aria-controls="collapse-post">
+                        <span class="hidden-sm hidden-xs">ABOUT</span>
+                    </a>
+                    <ul class="collapse collapseable" id="collapse-post">
+                        <li><a class="nav-link" href="#!team">OUR TEAM</a></li>
+                        <li><a  class="nav-link"href="#!wwoffer">WHAT WE OFFER</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="#!blog">BLOG</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="#!contactus">CONTACT US</a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-secundary my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+    </header>
+  
+  <!-- Main Del -->  
+    <main>
+      <div ng-view></div>
+    </main>
+
+  <!-- Footer Del -->
+    <footer>
+      <div class="row col-sm-12 foot">
+        <div class="col-sm-4">
+          <h6>GALLERY</h6>
+          <div class="row">
+            <div class="col-sm-4" ng-repeat="product in product | limitTo: 6">
+              <div class="card-deck border-success">
+                <img src="./assets/img/products/{{product.product_cover_1}}" class="card-img-top" alt="...">
+              </div>
+           </div>
+      </div>
+        </div>
+        <div class="col-sm-4">
+          <h6>QUICK LINKS</h6>
+            <div class="row col-sm-12 quick">
+                  <div class="col-sm-6">
+                    <ul>
+                      <li>
+                        <a href="#">About US</a>
+                      </li>
+                      <li>
+                        <a href="#!team">Our Team</a>
+                      </li>
+                      <li>
+                        <a href="#!shop">Shop</a>
+                      </li>
+                      <li>
+                        <a href="#">FAQ</a>
+                      </li>
+                      <li>
+                        <a href="#!contactus">Contact Us</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-6">
+                    <ul>
+                      <li>
+                        <a href="#!wwoffer">What We Offer</a>
+                      </li>
+                      <li>
+                        <a href="#!blogpost">Our Blog</a>
+                      </li>
+                      <li>
+                        <a href="#!shop_product">Testimonials</a>
+                      </li>
+                      <li>
+                        <a href="#">Baking School</a>
+                      </li>
+                      <li>
+                        <a href="#">Our Recepies</a>
+                      </li>
+                    </ul>
+                  </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+          <h6>GET IN TOUCH</h6>
+          <div class="row col-sm-12 getin">
+            <div class="col-sm-2">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="col-sm-10">
+              <h5>Partizanska 57-10<br/> 7000 Bitola, Macedonia</h5>
+            </div>
+          </div>
+          <div class="row col-sm-12">
+            <div class="col-sm-2">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="col-sm-10">
+              <h5>+389 (047) 222 222<br/>.</h5>
+            </div>
+          </div>
+          <div class="row col-sm-12 ">
+            <div class="col-sm-2">
+              <i class="fas fa-at"></i>
+            </div>
+            <div class="col-sm-10">
+              <h5>info.marieli@marieli.com.mk</h5>
+            </div>
+          </div>
+          <div class="row col-sm-12 social">
+                <div class="col-sm-2">
+                  <i class="fab fa-facebook fa-3x"></i>
+                </div>
+                <div class="col-sm-2">
+                  <i class="fab fa-linkedin fa-3x"></i>
+                </div>
+                  <div class="col-sm-2">
+                    <i class="fab fa-instagram fa-3x"></i>
+                </div>
+                <div class="col-sm-2">
+                  <i class="fab fa-viber fa-3x"></i>
+                </div>
+                <div class="col-sm-2">
+                  <i class="fab fa-skype fa-3x"></i>
+                </div>            
+          </div>
+        </div>        
+      </div>
+    </footer>
+  <!-- Scripti -->
+    <script src="./assets/js/all.min.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>    
+    <script src="./assets/js/bootstrap.min.js"></script>
+    
+    
+</body>
+</html>

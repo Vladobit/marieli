@@ -1,0 +1,31 @@
+<h3>Contact List</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>PK</th>
+            <th>
+                <input type="text" placeholder="Search by First Name" id="searchByFirst_name" name="searchByFirst_name"
+                ng-model="searchByFirst_name">
+            </th>
+            <th>
+                <input type="text" placeholder="Search by Last Name" id="searchByLast_name" name="searchByLast_name"
+                ng-model="searchByLast_name">
+            </th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>Message</th>
+            <th>DELETE</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="contact in contact | filter : {first_name:searchByFirst_name,last_name:searchByLast_name}">
+            <td>{{contact.contact_id}}</td>
+            <td>{{contact.first_name}}</td>
+            <td>{{contact.last_name}}</td>
+            <td>{{contact.email}}</td>
+            <td>{{contact.mobile}}</td>
+            <td>{{contact.message}}</td>
+            <td><button ng-click="deleteRow('contact',contact.contact_id)">Izbrishi</button></td>
+        </tr>
+    </tbody>
+</table>
