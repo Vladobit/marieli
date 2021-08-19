@@ -1,0 +1,15 @@
+.banner{
+    border: 1px solid black;
+    max-width: 100%;
+    margin: 0;
+    padding: 10px;
+    background-image: url("../img/bannercake.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.naslov{
+    font-size: 2rem;
+    color: green;
+    
+}

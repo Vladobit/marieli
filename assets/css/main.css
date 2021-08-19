@@ -1,0 +1,304 @@
+body{
+    max-width: 100%;
+    height: 100vh;
+    background-color: whitesmoke;
+}
+.banner{
+    display: flex;
+    text-align: center;
+}
+.adresa{
+    display: flex;
+    margin-top: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: lighter;
+}
+.btncolor{
+    margin-top: 20px;
+    border-bottom: sienna;
+}
+.btncolor:hover{
+    margin-top: 20px;
+    background-color: sienna;
+    color: white;
+}
+.navbar{
+    border-top: 1px solid sienna;
+    margin-top: 3px;
+}
+.nav-item{
+    margin-top: -8px;
+}
+.nav-item:hover{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.nav-link{
+ color: sienna;   
+}
+.ex1{
+  background-color: lightblue;
+  width: 110px;
+  height: 110px;
+  overflow: auto;
+}
+/* .active{
+    border-top: 8px solid sienna;
+    font-weight: bold;    
+} */
+.form-control{
+    background-color: none;
+    border: none;
+}
+footer{    
+    border-top:1px solid sienna;
+}
+.foot{
+    margin-top: 50px;
+    display: flex;
+    text-align: left;
+}
+.foot h6{
+    font-weight: bold;
+}
+.foot svg{
+    color: sienna;
+    text-align: center;
+}
+
+.quick{
+    margin-top: 30px;
+}
+.quick a{
+    text-decoration: none;
+    color: sienna;
+}
+.quick a:hover{
+    text-decoration: none;
+    color: sienna;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.getin{
+    margin-top: 30px;
+}
+.foot h5{
+    font-size: small;
+    font-weight: normal;
+}
+.foot h5:hover{
+    cursor: pointer;
+    font-size: normal;
+    font-weight:bold;
+}
+.social{
+    margin-top: 10px;
+}
+.social svg{
+    color:chocolate;
+    font-weight: bold;
+}
+.social svg:hover{
+    cursor: pointer;
+    color:sienna;
+    font-size: 3.1rem;
+}
+/* --------------  gallery css ----------------*/
+.gallery_banner{
+    width: 100%;
+    height:400px;
+    margin: 0;
+    padding: 10px;
+    background-image: url("../img/CakeBanner.jpg");
+    background-size: cover;
+    
+}
+.gallery_banner h2{
+    font-size: 5rem;
+    font-weight: bolder;
+    text-align: center;
+    color: white;
+    margin-top: 10%;
+    animation-name: scale;
+    animation-duration: 3s;    
+}
+@keyframes scale{
+    0%   {transform: scale(1);}
+    50%  {transform: scale(2);}
+    100% {transform: scale(1);}
+}
+.gallery_select{
+    display: flex;
+    text-align: center;
+    margin-top: 10px;
+}
+.gallery_select h4{
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+#product_categorie{
+    margin: 20px;
+}
+.gallery_card{
+    margin: 20px;    
+}
+
+.text{
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: small;
+    background-color: aliceblue;
+    color: sienna; 
+}
+/* --------------  contact css ----------------*/
+.contact_h2{
+    color: sienna;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 10px;
+}
+.contact_p{
+    margin-left: 10px;
+}
+.contact_form{
+    margin: 10px;
+    background: none;
+}
+/* --------------  what we offer css ----------------*/
+.about_we{
+    margin-top: 20px;
+}
+.about_we h5{
+    color: sienna;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+.about_we svg{
+    margin-left: 130px;
+    color: sienna;
+}
+.about_we p{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: small;
+    font-style: italic;
+}
+.form-we{
+    text-align: center;
+    border-bottom: 1px solid sienna;
+}
+.banner_we{
+    max-width: 100%;
+    height: 200px;
+    background-image: url("../img/vday.jpg");
+    background-size: cover;
+    margin-bottom: 40px;
+}
+.row_we{
+    margin-top: 40px;
+    
+}
+/* -------------- our team css ----------------*/
+.team{
+    margin :30px;
+}
+.card-img-top{
+    width: 100%;
+}
+/* -------------- blog css ----------------*/
+.blogg{
+    margin : 40px
+}
+.card-title{
+    color: sienna;
+}
+.card-title:hover{
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+/* -------------- shop css ----------------*/
+.shop_row{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+}
+.shop_left{
+   display: flex;
+}
+.shop_left_row{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 10px;
+    max-width: 100% ;
+    float: left;    
+}
+.shop_row h5{
+    margin-bottom: 30px;
+}
+.custom-select{
+    background: none;
+    color: sienna;
+}
+.para{
+    margin: 20px;
+}
+/* -------------- blog post css ----------------*/
+.bpost{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+/* -------------- blog post css ----------------*/
+.intro h1{
+    margin-top: 20px;
+}
+.main_banner{
+    width: 80%;
+    height:500px;
+    margin: auto;
+    margin-top: -40px;
+    padding: 20px;
+    background-image: url("../img/vday.jpg");
+    background-size: cover;
+    border: 10px solid white;
+    
+}
+.main_banner h3{
+    margin:10px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: xx-large;
+    font-weight: bolder;
+    color:brown;
+    border-color:1px solid black;
+}
+.main_banner h5{
+    color: white;
+    margin: 40px;
+    padding: 10px;
+    margin-top: 50px;
+}
+.naslov{
+    font-size: 5rem;
+    font-weight: bolder;
+    text-align: center;
+    color: silver;
+    margin-top: 10%;
+    animation-name: scale;
+    animation-duration: 3s;
+    animation-delay: 1s;    
+}
+@keyframes scale{
+    0%   {transform: scale(1);}
+    50%  {transform: scale(2);}
+    100% {transform: scale(1);}
+}
+/* -------------- single shop css ----------------*/
+.single{
+    margin: 30px;
+}
